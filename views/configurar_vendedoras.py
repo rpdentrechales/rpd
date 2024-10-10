@@ -1,0 +1,19 @@
+import streamlit as st
+import pandas as pd
+import datetime
+
+st.set_page_config(page_title="Sample Page 1", page_icon="💎",layout="wide")
+
+@st.cache_data
+def load_df(worksheet):
+
+  conn = st.connection("gsheets", type=GSheetsConnection)
+  df = conn.read(worksheet=worksheet)
+
+  return df
+
+st.title("Sample Page 1")
+
+df = load_df("base_vendedoras")
+
+st.dataframe(df)

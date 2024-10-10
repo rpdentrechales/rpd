@@ -1,8 +1,8 @@
 import streamlit as st
 
 # --- PAGE SETUP ---
-sample_page = st.Page(
-    "views/page_1.py",
+configurar_vendedoras_page = st.Page(
+    "views/configurar_vendedoras.py",
     title="Sample Page 1",
     icon=":material/thumb_up:",
     default=True,
@@ -14,7 +14,7 @@ sample_page = st.Page(
 # --- NAVIGATION SETUP [WITH SECTIONS]---
 pg = st.navigation(
     {
-        "Pages": [sample_page]
+        "Pages": [configurar_vendedoras_page]
     }
 )
 
