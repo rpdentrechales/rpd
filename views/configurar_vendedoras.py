@@ -17,4 +17,10 @@ st.title("RPD - Configurar Vendedoras")
 
 df = load_df("base_vendedoras")
 
-st.dataframe(df)
+nome_das_vendedoras = df["NOME"].unique()
+
+vendedora_selecionada = st.selectbox("Selecione a Vendedora", nome_das_vendedoras)
+
+id_vendedora = df.loc[df["NOME"] == vendedora_selecionada, "ID"].values[0]
+
+st.markdown(f'[ID da Vendedora: {id_vendedora}](https://rpd-procorpo.streamlit.app/?id={id_vendedora})')
