@@ -13,7 +13,7 @@ def load_df(worksheet):
 
   return df
 
-st.title("Configurar Vendedoras")
+st.title("RPD - Configurar Vendedoras")
 
 df = load_df("base_vendedoras")
 
