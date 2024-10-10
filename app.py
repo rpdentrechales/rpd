@@ -1,11 +1,17 @@
 import streamlit as st
 
 # --- PAGE SETUP ---
+vendedoras_page = st.Page(
+    "views/inserir_vendas.py",
+    title="Configurar Vendedoras",
+    icon=":material/thumb_up:",
+    default=True,
+)
+
 configurar_vendedoras_page = st.Page(
     "views/configurar_vendedoras.py",
     title="Configurar Vendedoras",
     icon=":material/thumb_up:",
-    default=True,
 )
 
 # --- NAVIGATION SETUP [WITHOUT SECTIONS] ---
@@ -13,8 +19,9 @@ configurar_vendedoras_page = st.Page(
 
 # --- NAVIGATION SETUP [WITH SECTIONS]---
 pg = st.navigation(
-    {
-        "Pages": [configurar_vendedoras_page]
+    { 
+        "Vendedoras":[vendedoras_page],
+        "Configurar": [configurar_vendedoras_page]
     }
 )
 
