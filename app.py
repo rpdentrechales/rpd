@@ -4,14 +4,14 @@ import streamlit as st
 vendedoras_page = st.Page(
     "views/inserir_vendas.py",
     title="Área da Vendedora",
-    icon=":material/thumb_up:",
+    icon=":material/universal_currency:",
     default=True,
 )
 
 configurar_vendedoras_page = st.Page(
     "views/configurar_vendedoras.py",
     title="Configurar Vendedoras",
-    icon=":material/thumb_up:",
+    icon=":material/manufacturing:",
 )
 
 # --- NAVIGATION SETUP [WITHOUT SECTIONS] ---
