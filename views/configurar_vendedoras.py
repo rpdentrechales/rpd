@@ -3,7 +3,7 @@ import pandas as pd
 import datetime
 from streamlit_gsheets import GSheetsConnection
 
-st.set_page_config(page_title="Configurar Vendedoras", page_icon="💎",layout="wide")
+st.set_page_config(page_title="RPD - Configurar Vendedoras", page_icon="💎",layout="wide")
 
 @st.cache_data
 def load_df(worksheet):
