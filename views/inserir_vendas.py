@@ -13,16 +13,22 @@ def load_df(worksheet):
 
   return df
 
-id_vendedora = st.query_params["id"]
-df = load_df("base_vendedoras")
-dados_vendedora = df.loc[df["ID"] == id_vendedora]
+url_parameters = st.query_params
 
-nome_vendedora = dados_vendedora["NOME"].values[0]
-email_vendedora = dados_vendedora["EMAIL"].values[0]
-loja_vendedora = dados_vendedora["LOJA"].values[0]
+if "id" in url_parameters:
+  id_vendedora = st.query_params["id"]
+  df = load_df("base_vendedoras")
+  dados_vendedora = df.loc[df["ID"] == id_vendedora]
 
-st.title("RPD")
+  nome_vendedora = dados_vendedora["NOME"].values[0]
+  email_vendedora = dados_vendedora["EMAIL"].values[0]
+  loja_vendedora = dados_vendedora["LOJA"].values[0]
 
-st.header(f"Olá, {nome_vendedora}")
-st.write(f"Sua loja é a {loja_vendedora}")
-st.write(f"Seu email é {email_vendedora}")
+  st.title("RPD")
+
+  st.header(f"Olá, {nome_vendedora}")
+  st.write(f"Sua loja é a {loja_vendedora}")
+  st.write(f"Seu email é {email_vendedora}")
+else:
+  st.title("RPD")
+  st.header("Você não está logado")
