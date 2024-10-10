@@ -15,6 +15,8 @@ def load_df(worksheet):
 
 url_parameters = st.query_params
 
+st.title("RPD - Área das vendedoras")
+
 if "id" in url_parameters:
   id_vendedora = st.query_params["id"]
   df = load_df("base_vendedoras")
@@ -24,11 +26,10 @@ if "id" in url_parameters:
   email_vendedora = dados_vendedora["EMAIL"].values[0]
   loja_vendedora = dados_vendedora["LOJA"].values[0]
 
-  st.title("RPD")
+
 
   st.header(f"Olá, {nome_vendedora}")
   st.write(f"Sua loja é a {loja_vendedora}")
   st.write(f"Seu email é {email_vendedora}")
 else:
-  st.title("RPD")
   st.header("Você não está logado")
