@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import datetime
 
-st.set_page_config(page_title="Sample Page 1", page_icon="💎",layout="wide")
+st.set_page_config(page_title="Configurar Vendedoras", page_icon="💎",layout="wide")
 
 @st.cache_data
 def load_df(worksheet):
@@ -12,7 +12,7 @@ def load_df(worksheet):
 
   return df
 
-st.title("Sample Page 1")
+st.title("Configurar Vendedoras")
 
 df = load_df("base_vendedoras")
 
