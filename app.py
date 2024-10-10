@@ -3,7 +3,7 @@ import streamlit as st
 # --- PAGE SETUP ---
 configurar_vendedoras_page = st.Page(
     "views/configurar_vendedoras.py",
-    title="Sample Page 1",
+    title="Configurar Vendedoras",
     icon=":material/thumb_up:",
     default=True,
 )
