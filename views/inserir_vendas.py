@@ -29,7 +29,7 @@ if "id" in url_parameters:
   if 'dados_vendedora' not in st.session_state and ids_encontrados == 1:
       st.session_state['dados_vendedora'] = dados_vendedora
 
-elif 'dados_vendedora' in st.session_state:
+if 'dados_vendedora' in st.session_state:
   dados_vendedora = st.session_state['dados_vendedora']
   carregar_pag_vendedora = True
 
