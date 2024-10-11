@@ -5,7 +5,6 @@ vendedoras_page = st.Page(
     "views/inserir_vendas.py",
     title="Inserir Vendas",
     icon=":material/universal_currency:",
-    default=True,
 )
 
 # teste_vendedoras_page = st.Page(
@@ -18,6 +17,7 @@ teste_url_vendedoras_page = st.Page(
     "views/configurar_vendedoras.py",
     title="Configurar Vendedoras",
     icon=":material/manufacturing:",
+    default=True
 )
 
 # --- NAVIGATION SETUP [WITHOUT SECTIONS] ---
