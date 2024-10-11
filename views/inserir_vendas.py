@@ -40,6 +40,21 @@ if carregar_pag_vendedora:
 
   st.markdown("# RPD - Área das vendedoras")
   st.write(f"Olá, {nome_vendedora}")
+
+  coluna_1, coluna_2 = st.columns(2)
+
+  with coluna_1:
+
+    with st.form("inserir_vendas",enter_to_submit=False):
+      
+      st.write("Inserir Vendas")
+      slider_val = st.slider("Form slider")
+      checkbox_val = st.checkbox("Form checkbox")
+
+      # Every form must have a submit button.
+      submitted = st.form_submit_button("Submit")
+    if submitted:
+        st.write("slider", slider_val, "checkbox", checkbox_val)
   
 else:
   st.markdown("# Essa página não existe")
