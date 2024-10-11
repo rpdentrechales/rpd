@@ -17,8 +17,6 @@ def load_df(worksheet):
 
 url_parameters = st.query_params
 
-st.title("RPD - Área das vendedoras")
-
 if "id" in url_parameters:
 
   id_vendedora = st.query_params["id"]
@@ -38,10 +36,16 @@ if carregar_pag_vendedora:
   nome_vendedora = dados_vendedora["nome"].values[0]
   email_vendedora = dados_vendedora["email"].values[0]
   loja_vendedora = dados_vendedora["loja"].values[0]
+  id_vendedora = dados_vendedora["id_vendedora"].values[0]
 
-  st.header(f"Olá, {nome_vendedora}")
-  st.write(f"Sua loja é a {loja_vendedora}")
-  st.write(f"Seu email é {email_vendedora}")
+  header_1, header_2 = st.columns(2)
 
+  with header_1:
+
+    st.markdown("# RPD - Área das vendedoras")
+
+  with header_2:
+    st.header(f"Olá, {nome_vendedora}")
+  
 else:
-  st.write("Essa página não existe")
+  st.markdown("# Essa página não existe")
