@@ -13,14 +13,14 @@ def load_df(worksheet):
 
   return df
 
-st.title("RPD - Link das vendedoras")
+st.title("Testes - Link das vendedoras")
 
 df = load_df("base_vendedoras")
 
 nome_das_vendedoras = df["nome_crm"].unique()
 
-vendedora_selecionada = st.selectbox("Selecione a Vendedora", nome_das_vendedoras)
+vendedora_selecionada = st.selectbox("Selecione uma Vendedora", nome_das_vendedoras)
 
 id_vendedora = df.loc[df["nome_crm"] == vendedora_selecionada, "id_vendedora"].values[0]
 
-st.markdown(f'[Abrir site da vendedora](https://rpd-procorpo.streamlit.app/inserir_vendas/?id={id_vendedora})')
+st.markdown(f'[Abrir site da vendedora](https://rpd-procorpo.streamlit.app/inserir_vendas?id={id_vendedora})')
