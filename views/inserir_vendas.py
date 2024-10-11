@@ -23,7 +23,7 @@ if "id" in url_parameters:
 
   id_vendedora = st.query_params["id"]
   df = load_df("base_vendedoras")
-  dados_vendedora = df.loc[df["ID"] == id_vendedora]
+  dados_vendedora = df.loc[df["id_vendedora"] == id_vendedora]
   ids_encontrados = len(dados_vendedora)
  
   if 'dados_vendedora' not in st.session_state and ids_encontrados == 1:
@@ -35,9 +35,9 @@ elif 'dados_vendedora' in st.session_state:
 
 if carregar_pag_vendedora:
 
-  nome_vendedora = dados_vendedora["NOME"].values[0]
-  email_vendedora = dados_vendedora["EMAIL"].values[0]
-  loja_vendedora = dados_vendedora["LOJA"].values[0]
+  nome_vendedora = dados_vendedora["nome"].values[0]
+  email_vendedora = dados_vendedora["email"].values[0]
+  loja_vendedora = dados_vendedora["loja"].values[0]
 
   st.header(f"Olá, {nome_vendedora}")
   st.write(f"Sua loja é a {loja_vendedora}")
