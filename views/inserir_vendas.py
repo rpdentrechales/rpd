@@ -45,5 +45,3 @@ if carregar_pag_vendedora:
 
 else:
   st.write("Essa página não existe")
-  st.write("Ids encotrados:")
-  st.dataframe(ids_encontrados)
