@@ -8,11 +8,11 @@ vendedoras_page = st.Page(
     default=True,
 )
 
-teste_vendedoras_page = st.Page(
-    "views/teste_vendedoras.py",
-    title="Teste Vendedora",
-    icon=":material/manufacturing:"
-)
+# teste_vendedoras_page = st.Page(
+#     "views/teste_vendedoras.py",
+#     title="Teste Vendedora",
+#     icon=":material/manufacturing:"
+# )
 
 teste_url_vendedoras_page = st.Page(
     "views/configurar_vendedoras.py",
@@ -27,7 +27,7 @@ teste_url_vendedoras_page = st.Page(
 pg = st.navigation(
     {
         "Vendedoras":[vendedoras_page],
-        "Testes": [teste_vendedoras_page,teste_url_vendedoras_page]
+        "Testes": [teste_url_vendedoras_page]
     }
 )
 
