@@ -45,7 +45,7 @@ if carregar_pag_vendedora:
     st.markdown("# RPD - Área das vendedoras")
 
   with header_2:
-    st.title(f"Olá, {nome_vendedora}")
+    st.write(f"Olá, {nome_vendedora}")
   
 else:
   st.markdown("# Essa página não existe")
