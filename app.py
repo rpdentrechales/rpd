@@ -11,8 +11,7 @@ vendedoras_page = st.Page(
 teste_vendedoras_page = st.Page(
     "views/teste_vendedoras.py",
     title="Área da Vendedora",
-    icon=":material/universal_currency:",
-    default=True,
+    icon=":material/universal_currency:"
 )
 
 teste_url_vendedoras_page = st.Page(
