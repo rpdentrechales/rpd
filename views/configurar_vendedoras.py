@@ -17,10 +17,10 @@ st.title("RPD - Link das vendedoras")
 
 df = load_df("base_vendedoras")
 
-nome_das_vendedoras = df["nome"].unique()
+nome_das_vendedoras = df["nome_crm"].unique()
 
 vendedora_selecionada = st.selectbox("Selecione a Vendedora", nome_das_vendedoras)
 
-id_vendedora = df.loc[df["nome"] == vendedora_selecionada, "id_vendedora"].values[0]
+id_vendedora = df.loc[df["nome_crm"] == vendedora_selecionada, "id_vendedora"].values[0]
 
 st.markdown(f'[Abrir site da vendedora](https://rpd-procorpo.streamlit.app/?id={id_vendedora})')
