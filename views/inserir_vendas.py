@@ -46,15 +46,14 @@ if carregar_pag_vendedora:
   with coluna_1:
 
     with st.form("inserir_vendas",enter_to_submit=False):
-      
-      st.write("Inserir Vendas")
-      slider_val = st.slider("Form slider")
-      checkbox_val = st.checkbox("Form checkbox")
 
-      # Every form must have a submit button.
-      submitted = st.form_submit_button("Submit")
+      st.write("Inserir Vendas")
+      id_cliente = st.number_input("Id do Cliente", value=None, placeholder="Insira o Id do Cliente")
+
+      submitted = st.form_submit_button("Inserir Venda")
     if submitted:
-        st.write("slider", slider_val, "checkbox", checkbox_val)
+      st.write("Id cliente", id_cliente)
+      st.baloons()
   
 else:
   st.markdown("# Essa página não existe")
