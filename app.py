@@ -8,7 +8,14 @@ vendedoras_page = st.Page(
     default=True,
 )
 
-configurar_vendedoras_page = st.Page(
+teste_vendedoras_page = st.Page(
+    "views/teste_vendedoras.py",
+    title="Área da Vendedora",
+    icon=":material/universal_currency:",
+    default=True,
+)
+
+teste_url_vendedoras_page = st.Page(
     "views/configurar_vendedoras.py",
     title="Configurar Vendedoras",
     icon=":material/manufacturing:",
@@ -19,9 +26,9 @@ configurar_vendedoras_page = st.Page(
 
 # --- NAVIGATION SETUP [WITH SECTIONS]---
 pg = st.navigation(
-    { 
+    {
         "Vendedoras":[vendedoras_page],
-        "Configurar": [configurar_vendedoras_page]
+        "Testes": [teste_vendedoras_page,teste_url_vendedoras_page]
     }
 )
 
