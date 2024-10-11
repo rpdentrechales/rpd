@@ -38,14 +38,8 @@ if carregar_pag_vendedora:
   loja_vendedora = dados_vendedora["loja"].values[0]
   id_vendedora = dados_vendedora["id_vendedora"].values[0]
 
-  header_1, header_2 = st.columns(2)
-
-  with header_1:
-
-    st.markdown("# RPD - Área das vendedoras")
-
-  with header_2:
-    st.write(f"Olá, {nome_vendedora}")
+  st.markdown("# RPD - Área das vendedoras")
+  st.write(f"Olá, {nome_vendedora}")
   
 else:
   st.markdown("# Essa página não existe")
