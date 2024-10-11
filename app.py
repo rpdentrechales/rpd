@@ -11,7 +11,7 @@ vendedoras_page = st.Page(
 teste_vendedoras_page = st.Page(
     "views/teste_vendedoras.py",
     title="Teste Vendedora",
-    icon=":material/universal_currency:"
+    icon=":material/manufacturing:"
 )
 
 teste_url_vendedoras_page = st.Page(
